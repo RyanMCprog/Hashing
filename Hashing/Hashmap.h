@@ -13,7 +13,7 @@ public:
 
 	V& operator[] (const K& key);
 };
-
+//constructor
 template<typename K, typename V>
 inline tHashmap<K, V>::tHashmap()
 {
@@ -25,9 +25,9 @@ inline tHashmap<K, V>::tHashmap()
 template<typename K, typename V>
 inline tHashmap<K, V>::~tHashmap()
 {
-	delete data[];
+	delete[] data;
 }
-
+//modules the hashed key
 template<typename K, typename V>
 inline V & tHashmap<K, V>::operator[](const K & key)
 {
